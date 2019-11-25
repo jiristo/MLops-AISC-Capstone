@@ -43,7 +43,7 @@ aws s3api put-object --bucket ${Lambdas_Bucket} \
 aws cloudformation create-stack \
   --region ${AWS_DEFAULT_REGION} \
   --stack-name ${Template_Name} \
-  --template-body file://template/sagemaker-pipeline.yaml \
+  --template-body file://Template/pipeline.yaml \
   --parameters \
     ParameterKey=LambdasBucket,ParameterValue=${Lambdas_Bucket} \
     ParameterKey=LambdasKey,ParameterValue=${Lambdas_Key} \
