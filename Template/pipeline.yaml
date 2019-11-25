@@ -1,12 +1,16 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: 
-  CICD Pipeline for deploying ML model 
-
-Parameters:
-
-Metadata:
-
 Resources:
-
-Outputs:
-
+ DataBucket:
+   Type: ‘AWS::S3::Bucket’
+   Properties:
+     BucketName: !Sub ‘${AWS::StackName}-pipeline-data’
+     VersioningConfiguration:
+       Status: Enabled
+ ModeArtifactslBucket:
+   Type: ‘AWS::S3::Bucket’
+   Properties:
+     BucketName: !Sub ‘${AWS::StackName}-pipeline-artifact-store’
+     VersioningConfiguration:
+       Status: Enabled
+ PipelineBucket:
+   Type: ‘AWS::S3::Bucket’
