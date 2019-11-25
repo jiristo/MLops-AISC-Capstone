@@ -6,11 +6,3 @@ Resources:
      BucketName: !Sub ‘${AWS::StackName}-pipeline-data’
      VersioningConfiguration:
        Status: Enabled
- ModeArtifactslBucket:
-   Type: ‘AWS::S3::Bucket’
-   Properties:
-     BucketName: !Sub ‘${AWS::StackName}-pipeline-artifact-store’
-     VersioningConfiguration:
-       Status: Enabled
- PipelineBucket:
-   Type: ‘AWS::S3::Bucket’

@@ -43,7 +43,7 @@ aws s3api put-object --bucket ${Lambdas_Bucket} \
 aws cloudformation create-stack \
   --region ${AWS_DEFAULT_REGION} \
   --stack-name ${Template_Name} \
-  --template-body file://Template/pipeline.yaml \
+  --template-body file:///Users/jiristodulka/GoogleDrive/GitHub/MLops-AISC-Capstone/launch-pipeline.sh \
   --parameters \
     ParameterKey=LambdasBucket,ParameterValue=${Lambdas_Bucket} \
     ParameterKey=LambdasKey,ParameterValue=${Lambdas_Key} \
