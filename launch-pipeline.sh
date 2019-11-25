@@ -2,14 +2,14 @@
 
 
 # AWS Account Parameters
-AWS_DEFAULT_REGION="<Enter AWS Region your are using, ie us-east-1>"
-Email="<Enter Your Email>"
+AWS_DEFAULT_REGION="us-east-1"
+Email="jiri.stod@gmail.com"
 
 # Parameters to Configure Specific Github Repo
-GitHub_User="<Enter Github Username>"
-GitHub_Repo="<Enter Github Repository Name>"
-GitHub_Branch="<Enter Repository Branch Name>"
-GitHub_Token="<Enter Github Personal Access Token>"
+GitHub_User="jiristo"
+GitHub_Repo="MLops-AISC-Capstone"
+GitHub_Branch="master"
+GitHub_Token="be52f2d9dc2e51066fb1b5c74e26f47a128ab606"
 
 # CodeBuild Project Parameters
 Python_Build_Version="aws/codebuild/python:3.6.-3.5"
@@ -21,7 +21,7 @@ Instance_Type="ml.m4.xlarge"
 Max_Runtime_In_Seconds=86400
 Vol_In_GB=60
 
-Template_Name="${GitHub_Repo}-cicd-pipeline"
+Template_Name="${GitHub_Repo}-jiri-cicd-pipeline"
 Lambdas_Bucket="${Template_Name}-lambdas-`date '+%Y-%m-%d-%H-%M-%S'`"
 Lambdas_Key="SageMakerTriggers/LambdaFunction.zip"
 
